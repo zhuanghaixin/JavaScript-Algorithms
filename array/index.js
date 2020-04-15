@@ -1,55 +1,18 @@
-# JavaScript-Algorithms
-JavaScript算法与数据结构
-# 数据结构之数组
-## 一维数组
-
-- 数组的创建
-
-```javascript
+//数组的创建
 const arr1=[1,2,3,4]
-```
-
-- 构造函数创建数组
-
-```javascript
+//构造函数创建数组
 const arr2=new Array()
-```
-
-- 不传参等价于
-
-```javascript
+//不传参等价于
 const arr3=[]
-```
-
-- 创造指定长度的空数组
-
-```javascript
+//创造指定长度的空数组
 const arr4=new Array(7)
-
-```
-
-- 创造一个长度确定，同时每一个元素也确定的数组
-
-```javascript
+//创造一个长度确定，同时每一个元素也确定的数组
 const arr5=new Array(7).fill(1)
-
-```
-
-- 数组的访问
-
-```javascript
+//数组的访问
 const arr6=[1,2,3]
 arr6[0]
-
-```
-
-- 数组的遍历
-
-
-1.for循环
-
-    
-```javascript
+//数组的遍历
+//1.for循环
 const arr7=[1,2,3,4,5,6,7]
     //获取数组的长度
 const len=arr7.length
@@ -57,56 +20,35 @@ for (let i = 0; i < len; i++) {
     //输出数组的元素值，输出当前索引
     console.log(arr7[i],i);
 }
-
-```
-2.forEach方法
-
-```javascript
-
+//2.forEach方法
 arr7.forEach((item,index)=>{
     console.log((item, index));
 })
+//原数组不改变
 
-```
-原数组不改变
-
-3.map方法
-
-```javascript
+//3.map方法
 arr7.map((item, index)=>{
     console.log((item, index));
     return item+1
 })
 console.log(arr7);
 
-```
-原数组改变
 
-## 二维数组
-- fill的局限性
-
-
-```javascript
+//二维数组创建
+//fill的局限性
 const arr8=new Array(7).fill([])  //有问题
 arr8[0][0]=1
 console.log(arr8); //数组中每个元素都是1，明明我们只给第一行第一列赋值为1，
 //这是因为如果这个fill()入参是引用类型，那么fill填充的其实是入参的引用
-```
 
-- 正确的创建方法
-
-```javascript
+//正确的创建方法
 const arr9=[1,2,3]
 const len1=arr9.length
 for (let i = 0; i <len1 ; i++) {
     arr9[i]=[]
 }
 
-```
-- 二维数组的访问
-
-
-```javascript
+//二维数组的访问
 const arr10=[
     [1,2,3],
     [2,3,4,5],
@@ -123,10 +65,3 @@ for (let i = 0; i < outerLen; i++) {
         console.log(arr10[i][j], i, j);
     }
 }
-
-```
-
-
-
-
-
